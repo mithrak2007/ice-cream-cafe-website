@@ -1,56 +1,91 @@
-# Frost & Bloom Ice Cream Parlour Website
+# Frosty Delights Ice Cream Cafe
 
-This project is a single-page ice cream parlour website built to match the SEC course requirement of showing the complete modern web development workflow.
+Full-stack web application for an Ice Cream Cafe built with a modern workflow.
 
-## Requirement Check
+## Stack
 
-1. Single page website with frontend, backend, and database
-   - Frontend: `index.html`, `css/style.css`, `js/script.js`
-   - Backend: `backend/get_menu.php`, `backend/contact.php`
-   - Database: `backend/schema.sql`
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js + Express
+- Database: PostgreSQL
+- Version Control: Git
+- Deployment Ready: environment-based configuration and CI/CD-friendly scripts
 
-2. Git account and source code in Git repository
-   - Create a GitHub account if you do not already have one.
-   - Push this folder to your repository: `https://github.com/mithrak2007/ice-cream-parlour-website.git`
+## Project Structure
 
-3. Source code access for mentor review
-   - Once pushed to GitHub, share the repository URL with your mentor.
-   - GitHub itself is enough for source review.
-   - If your department specifically asks for Bitbucket, you can mirror the same repository there too.
-
-4. Hosting
-   - Free options: GitHub Pages for frontend only, or InfinityFree / 000webhost / Render if you want backend support.
-   - Paid hosting and custom domains are optional, not compulsory.
-
-## How This Project Works
-
-- The page loads menu items from `backend/get_menu.php`.
-- The contact form sends data to `backend/contact.php`.
-- PHP connects to MySQL using `backend/config.php`.
-- SQL schema and sample records are included in `backend/schema.sql`.
-
-## Local Setup
-
-1. Install XAMPP, WAMP, or any PHP + MySQL stack.
-2. Put this project in your web server directory or serve it locally.
-3. Create a MySQL database by importing `backend/schema.sql`.
-4. Update database credentials in `backend/config.php` if needed.
-5. Open the site in your browser through the PHP server.
-
-## Git Commands
-
-```bash
-git init
-git add .
-git commit -m "Build Frost & Bloom single-page ice cream website"
-git branch -M main
-git remote add origin https://github.com/mithrak2007/ice-cream-parlour-website.git
-git push -u origin main
+```text
+icecream-cafe/
+├── frontend/
+│   ├── index.html
+│   ├── menu.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── admin.html
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── backend/
+│   ├── server.js
+│   ├── db.js
+│   ├── routes/
+│   └── controllers/
+├── database/
+│   └── schema.sql
+├── .env.example
+├── package.json
+└── README.md
 ```
 
-## What To Tell Your Mentor
+## Features
 
-- It is a responsive single-page website.
-- The menu is designed to load dynamically from the backend.
-- The contact form demonstrates data submission through the backend into MySQL.
-- The repository is ready for GitHub review and can be deployed on a free or paid host.
+- Responsive modern cafe design with pastel palette
+- Home, Menu, About, Contact, and Admin pages
+- REST API for flavor management
+- Contact form submission API
+- PostgreSQL schema with sample data
+- Admin panel for add, edit, and delete operations
+- Frontend fetches live menu data from backend
+- Environment variables for database connection
+
+## API
+
+- `GET /api/flavors`
+- `GET /api/flavors/:id`
+- `POST /api/flavors`
+- `PUT /api/flavors/:id`
+- `DELETE /api/flavors/:id`
+- `POST /api/contact`
+
+## Run Locally
+
+1. Install Node.js and PostgreSQL.
+2. Create a PostgreSQL database.
+3. Import [schema.sql](/c:/Users/HP/Desktop/icecream%20website%20project/database/schema.sql)
+4. Copy `.env.example` to `.env` and update values.
+5. Run:
+
+```bash
+npm install
+npm run dev
+```
+
+6. Open `http://localhost:3000`
+
+## PostgreSQL Setup
+
+Run the SQL file in your PostgreSQL database:
+
+```bash
+psql -U postgres -d frosty_delights -f database/schema.sql
+```
+
+## Deployment Notes
+
+- Set production environment variables for PostgreSQL
+- Run `npm start`
+- Serve through Render, Railway, or any Node-compatible host
+
+## Repository
+
+Target repository:
+
+`https://github.com/mithrak2007/ice-cream-cafe-website`

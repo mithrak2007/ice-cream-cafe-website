@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosty Delights | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a class="brand" href="index.html">Frosty Delights</a>
+            <button class="nav-toggle" aria-label="Open navigation">Menu</button>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Modern Ice Cream Cafe</span>
+                    <h1>Pastel scoops, fresh ingredients, and a full-stack cafe experience.</h1>
+                    <p>Frosty Delights blends warm cafe storytelling with live menu data, backend APIs, and a PostgreSQL-powered admin workflow.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="menu.html">Order Now</a>
+                        <a class="button button-secondary" href="about.html">Explore the Story</a>
+                    </div>
+                </div>
+                <div class="hero-art">
+                    <img src="images/hero-icecream.svg" alt="Illustration of ice cream scoops in pastel colors">
+                </div>
+            </div>
+        </section>
+        <section class="feature-strip">
+            <div class="container info-grid three-up">
+                <article class="info-card">
+                    <h3>Freshly churned</h3>
+                    <p>Small batch flavors with creamy textures and vibrant fruit notes.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Responsive design</h3>
+                    <p>Beautiful cafe-style experience across desktop, tablet, and mobile.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Backend powered</h3>
+                    <p>Menu and contact workflows connect through Express and PostgreSQL.</p>
+                </article>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container section-head">
+                <span class="eyebrow">Featured Flavors</span>
+                <h2>Customer favorites from the Frosty Delights counter</h2>
+            </div>
+            <div class="container">
+                <div id="featured-flavors" class="card-grid"></div>
+            </div>
+        </section>
+        <section class="section cta-section">
+            <div class="container cta-panel">
+                <div>
+                    <span class="eyebrow">Visit Today</span>
+                    <h2>Bring a little pastel joy to your next dessert break.</h2>
+                </div>
+                <a class="button button-primary" href="contact.html">Plan a Visit</a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <p>Frosty Delights Ice Cream Cafe</p>
+            <p>&copy; <span id="year"></span> Crafted with HTML, CSS, JS, Node.js, and PostgreSQL.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

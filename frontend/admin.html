@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosty Delights | Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="admin">
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a class="brand" href="index.html">Frosty Delights</a>
+            <button class="nav-toggle" aria-label="Open navigation">Menu</button>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin.html" class="active">Admin</a>
+            </nav>
+        </div>
+    </header>
+    <main class="section page-intro">
+        <div class="container admin-layout">
+            <div>
+                <span class="eyebrow">Admin Panel</span>
+                <h1>Manage the ice cream menu</h1>
+                <p>Add, edit, and delete menu items using the REST API.</p>
+                <form id="admin-form" class="form-card">
+                    <input type="hidden" id="flavor-id">
+                    <label>Flavor Name<input type="text" id="flavor-name" required></label>
+                    <label>Price<input type="number" id="flavor-price" min="0" step="0.01" required></label>
+                    <label>Description<textarea id="flavor-description" rows="4" required></textarea></label>
+                    <label>Image URL<input type="text" id="flavor-image" required></label>
+                    <div class="form-actions">
+                        <button type="submit" class="button button-primary">Save Flavor</button>
+                        <button type="button" id="reset-form" class="button button-secondary">Clear</button>
+                    </div>
+                    <p id="admin-status" class="status-line"></p>
+                </form>
+            </div>
+            <div class="table-card">
+                <div class="table-head">
+                    <h2>Current Menu Items</h2>
+                </div>
+                <div id="admin-list" class="admin-list"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <p>Frosty Delights Ice Cream Cafe</p>
+            <p>&copy; <span id="year"></span> Admin management dashboard.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
