@@ -14,25 +14,25 @@ Full-stack web application for an Ice Cream Cafe built with a modern workflow.
 
 ```text
 icecream-cafe/
-├── frontend/
-│   ├── index.html
-│   ├── menu.html
-│   ├── about.html
-│   ├── contact.html
-│   ├── admin.html
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── backend/
-│   ├── server.js
-│   ├── db.js
-│   ├── routes/
-│   └── controllers/
-├── database/
-│   └── schema.sql
-├── .env.example
-├── package.json
-└── README.md
+|- frontend/
+|  |- index.html
+|  |- menu.html
+|  |- about.html
+|  |- contact.html
+|  |- admin.html
+|  |- css/
+|  |- js/
+|  `- images/
+|- backend/
+|  |- server.js
+|  |- db.js
+|  |- routes/
+|  `- controllers/
+|- database/
+|  `- schema.sql
+|- .env.example
+|- package.json
+`- README.md
 ```
 
 ## Features
@@ -59,7 +59,7 @@ icecream-cafe/
 
 1. Install Node.js and PostgreSQL.
 2. Create a PostgreSQL database.
-3. Import [schema.sql](/c:/Users/HP/Desktop/icecream%20website%20project/database/schema.sql)
+3. Import `database/schema.sql`
 4. Copy `.env.example` to `.env` and update values.
 5. Run:
 
@@ -72,8 +72,6 @@ npm run dev
 
 ## PostgreSQL Setup
 
-Run the SQL file in your PostgreSQL database:
-
 ```bash
 psql -U postgres -d frosty_delights -f database/schema.sql
 ```
@@ -85,7 +83,5 @@ psql -U postgres -d frosty_delights -f database/schema.sql
 - Serve through Render, Railway, or any Node-compatible host
 
 ## Repository
-
-Target repository:
 
 `https://github.com/mithrak2007/ice-cream-cafe-website`
